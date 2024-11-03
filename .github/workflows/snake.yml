@@ -3,7 +3,7 @@ name: Generate Snake Contribution Graph
 on:
   push:
     branches:
-      - main  # or the branch you want to use
+      - main  # Trigger on push to main branch
   schedule:
     - cron: "0 0 * * *"  # Runs every day at midnight
 
@@ -19,6 +19,12 @@ jobs:
         with:
           github_user_name: Aashrith2004  # Replace with your GitHub username
           outputs: dist/snake.svg
+
+      - name: Create output directory if not exists
+        run: mkdir -p dist  # Ensures the output directory is available for the SVG
+
+      - name: Move snake.svg to dist directory
+        run: mv github-contribution-grid-snake.svg dist/snake.svg  # Ensures the SVG is in the correct location
 
       - name: Push to the output branch
         uses: peaceiris/actions-gh-pages@v3
