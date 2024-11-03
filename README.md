@@ -46,11 +46,6 @@
 <br/>
 <hr/>
 
-<h2 align="center">🔥 My Contributions 🔥</h2>
-<br/>
-<div align="center">
-    <img alt="contribution graph" src="https://github.com/Aashrith2004/Aashrith2004/blob/output/github-contribution-grid-snake.svg" />
-</div>
 
 <hr/>
 
